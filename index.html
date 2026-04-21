@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email System</title>
+</head>
+<body>
+
+<h1>Email Automation System</h1>
+
+<h2>Contact Form</h2>
+
+<form id="contact">
+    <input name="name" placeholder="Name"><br>
+    <input name="email" placeholder="Email"><br>
+    <textarea name="message"></textarea><br>
+    <button>Send</button>
+</form>
+
+<h2>CV Upload</h2>
+
+<form id="cv">
+    <input name="name" placeholder="Name"><br>
+    <input name="email" placeholder="Email"><br>
+    <input type="file" id="file"><br>
+    <button>Send CV</button>
+</form>
+
+<script>
+document.getElementById("contact").onsubmit = async (e) => {
+    e.preventDefault();
+
+    let data = {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        message: e.target.message.value
+    };
+
+    await fetch("api/send-contact.php", {
+        method: "POST",
+        body: JSON.stringify(data)
+    });
+};
+
+document.getElementById("cv").onsubmit = async (e) => {
+    e.preventDefault();
+
+    let file = document.getElementById("file").files[0];
+    let reader = new FileReader();
+
+    reader.onload = async () => {
+        let data = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            file: reader.result.split(",")[1]
+        };
+
+        await fetch("api/send-cv.php", {
+            method: "POST",
+            body: JSON.stringify(data)
+        });
+    };
+
+    reader.readAsDataURL(file);
+};
+</script>
+
+</body>
+</html>
