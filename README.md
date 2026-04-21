@@ -29,6 +29,7 @@ Este es un sistema de automatización de correos usando PHP y SMTP.
 
 ## 📂 Structure
 
+- index..html
 - api → backend endpoints
 - config → secure configuration
 - templates → email designs
