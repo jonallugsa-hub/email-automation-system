@@ -35,7 +35,6 @@ Este es un sistema de automatización de correos usando PHP y SMTP.
 - phpmailer → library
 
 ---
-
 ## ⚙️ Setup
 
 1. Clone repository
@@ -55,3 +54,5 @@ Secure SMTP authentication
 ## 👨‍💻 Author
 
 Jonathan Llugsa
+
+
