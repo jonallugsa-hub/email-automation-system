@@ -37,7 +37,7 @@ Este es un sistema de automatización de correos usando PHP y SMTP.
 ## ⚙️ Setup
 
 1. Clone repository
-git clone https://github.com/your-user/email-automation-system.git
+git clone https://jonallugsa-hub/email-automation-system.git
 2. Create config file
 cp config/config.example.php config/config.php
 3. Add SMTP credentials
