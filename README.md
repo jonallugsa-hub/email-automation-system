@@ -33,12 +33,10 @@ Este es un sistema de automatización de correos usando PHP y SMTP.
 - config → secure configuration
 - templates → email designs
 - phpmailer → library
-
----
+- 
 ## ⚙️ Setup
 
 1. Clone repository
-```bash
 git clone https://github.com/your-user/email-automation-system.git
 2. Create config file
 cp config/config.example.php config/config.php
@@ -54,5 +52,3 @@ Secure SMTP authentication
 ## 👨‍💻 Author
 
 Jonathan Llugsa
-
-
